@@ -33,3 +33,27 @@ export function ProductCard({id, name, priceInCents, description, imagePath} : P
     </Card>
   )
 }
+
+export function ProductCardSkeletton(){
+  return (
+    <Card className="flex overflow-hidden flex-col animate-pulse transition-all">
+      <div className="w-full h-auto aspect-video bg-gray-300" />
+      <CardHeader>
+        <CardTitle>
+          <div className="w-3/4 h-6 rounded-full bg-gray-300"/>
+        </CardTitle>
+        <CardDescription>
+          <div className="w-1/2 h-4 rounded-full bg-gray-300"/>
+        </CardDescription>
+      </CardHeader>
+      <CardContent className="space-y-2">
+          <div className="w-full h-4 rounded-full bg-gray-300"/>
+          <div className="w-full h-4 rounded-full bg-gray-300"/>
+          <div className="w-full h-4 rounded-full bg-gray-300"/>
+      </CardContent>
+      <CardFooter>
+        <Button asChild size="lg" className="w-full" disabled></Button>
+      </CardFooter>
+    </Card>
+  )
+}
