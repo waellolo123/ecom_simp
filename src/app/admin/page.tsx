@@ -42,7 +42,8 @@ export default async function AdminDashboard(){
     getProductData()
   ]);
 
-  return <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+  return (
+   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
     <DashboardCard 
     title="Sales" 
     subtitle={`${formatNumber(salesData.numberOfSales)} Orders`} 
@@ -59,6 +60,7 @@ export default async function AdminDashboard(){
     body={formatNumber(productData.activeCount)}
     />
   </div>
+  )
 }
 
 
